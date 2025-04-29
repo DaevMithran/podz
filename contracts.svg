@@ -1,0 +1,71 @@
+<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background and border -->
+  <rect x="10" y="10" width="980" height="580" rx="10" ry="10" fill="#f8f9fa" stroke="#333" stroke-width="2"/>
+  <text x="30" y="40" font-family="Arial" font-size="24" font-weight="bold">Podz Smart Contract Architecture on Stellar</text>
+
+  <!-- Stellar Network Box -->
+  <rect x="20" y="60" width="960" height="520" rx="5" ry="5" fill="none" stroke="#6c757d" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="40" y="80" font-family="Arial" font-size="16" font-style="italic">Stellar Network</text>
+
+  <!-- Row 1 -->
+  <!-- OrderBook Contract -->
+  <rect x="70" y="120" width="260" height="180" rx="5" ry="5" fill="#d1e7dd" stroke="#333" stroke-width="2"/>
+  <text x="200" y="145" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">OrderBook Contract</text>
+  <text x="80" y="170" font-family="Arial" font-size="12">* Create/manage orders</text>
+  <text x="80" y="190" font-family="Arial" font-size="12">* Handle bids from providers</text>
+  <text x="80" y="210" font-family="Arial" font-size="12">* Match orders with bids</text>
+  <text x="80" y="230" font-family="Arial" font-size="12">* Create leases</text>
+  <text x="80" y="250" font-family="Arial" font-size="12">* Track order lifecycle</text>
+  <text x="80" y="270" font-family="Arial" font-size="12">* Maintain order history</text>
+
+  <!-- Provider Registry Contract -->
+  <rect x="370" y="120" width="260" height="180" rx="5" ry="5" fill="#cfe2ff" stroke="#333" stroke-width="2"/>
+  <text x="500" y="145" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Provider Registry</text>
+  <text x="380" y="170" font-family="Arial" font-size="12">* Register/track providers</text>
+  <text x="380" y="190" font-family="Arial" font-size="12">* Manage provider status</text>
+  <text x="380" y="210" font-family="Arial" font-size="12">* Assign trust levels</text>
+  <text x="380" y="230" font-family="Arial" font-size="12">* Verify provider eligibility</text>
+  <text x="380" y="250" font-family="Arial" font-size="12">* Provider lookup services</text>
+  <text x="380" y="270" font-family="Arial" font-size="12">* Track provider metrics</text>
+
+  <!-- Reputation System Contract -->
+  <rect x="670" y="120" width="260" height="180" rx="5" ry="5" fill="#ffd6e0" stroke="#333" stroke-width="2"/>
+  <text x="800" y="145" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Reputation System</text>
+  <text x="680" y="170" font-family="Arial" font-size="12">* Calculate provider reputation</text>
+  <text x="680" y="190" font-family="Arial" font-size="12">* Process liveness challenges</text>
+  <text x="680" y="210" font-family="Arial" font-size="12">* Handle user reports</text>
+  <text x="680" y="230" font-family="Arial" font-size="12">* Track historical performance</text>
+  <text x="680" y="250" font-family="Arial" font-size="12">* Adjust trust levels</text>
+  <text x="680" y="270" font-family="Arial" font-size="12">* Verify off-chain monitor proofs</text>
+
+  <!-- Row 2 -->
+  <!-- Escrow Contract -->
+  <rect x="70" y="350" width="260" height="180" rx="5" ry="5" fill="#fff3cd" stroke="#333" stroke-width="2"/>
+  <text x="200" y="375" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Escrow Contract</text>
+  <text x="80" y="400" font-family="Arial" font-size="12">* Handle deposits/withdrawals</text>
+  <text x="80" y="420" font-family="Arial" font-size="12">* Lock funds for leases</text>
+  <text x="80" y="440" font-family="Arial" font-size="12">* Transfer locked funds</text>
+  <text x="80" y="460" font-family="Arial" font-size="12">* Track provider earnings</text>
+  <text x="80" y="480" font-family="Arial" font-size="12">* Process tenant payments</text>
+  <text x="80" y="500" font-family="Arial" font-size="12">* Manage token balances</text>
+
+  <!-- Access Control Contract -->
+  <rect x="370" y="350" width="260" height="180" rx="5" ry="5" fill="#f8d7da" stroke="#333" stroke-width="2"/>
+  <text x="500" y="375" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Access Control</text>
+  <text x="380" y="400" font-family="Arial" font-size="12">* Role-based permissions</text>
+  <text x="380" y="420" font-family="Arial" font-size="12">* Admin/moderator access</text>
+  <text x="380" y="440" font-family="Arial" font-size="12">* Verify authority</text>
+  <text x="380" y="460" font-family="Arial" font-size="12">* Manage governance</text>
+  <text x="380" y="480" font-family="Arial" font-size="12">* Contract upgrade control</text>
+  <text x="380" y="500" font-family="Arial" font-size="12">* Emergency controls</text>
+
+  <!-- Reward Calculator Contract -->
+  <rect x="670" y="350" width="260" height="180" rx="5" ry="5" fill="#e2e3e5" stroke="#333" stroke-width="2"/>
+  <text x="800" y="375" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Reward Calculator</text>
+  <text x="680" y="400" font-family="Arial" font-size="12">* Calculate staking rewards</text>
+  <text x="680" y="420" font-family="Arial" font-size="12">* Apply inflation model</text>
+  <text x="680" y="440" font-family="Arial" font-size="12">* Track time-locked tokens</text>
+  <text x="680" y="460" font-family="Arial" font-size="12">* Compute validator rewards</text>
+  <text x="680" y="480" font-family="Arial" font-size="12">* Apply take fees</text>
+  <text x="680" y="500" font-family="Arial" font-size="12">* Distribute earnings</text>
+</svg>
