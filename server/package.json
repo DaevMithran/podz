@@ -1,0 +1,46 @@
+{
+  "name": "opengpu-server",
+  "version": "1.0.0",
+  "description": "Decentralized compute marketplace using Soroban contracts",
+  "main": "./src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "clean": "rm -rf ./dist",
+    "format": "prettier --config ../../.prettierrc.json --write 'src/**/*.{js,ts,cjs,mjs,json}'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@stellar/stellar-sdk": "^11.3.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dockerode": "^4.0.6",
+    "express": "^4.21.2",
+    "express-validator": "^7.0.1",
+    "helmet": "^8.1.0",
+    "http-status-codes": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "^2.8.17",
+    "@types/dockerode": "^3.3.38",
+    "@types/express": "^4.17.21",
+    "@types/helmet": "^4.0.0",
+    "@types/node": "^20.17.29",
+    "dotenv": "^16.4.7",
+    "typescript": "^5.8.2",
+    "winston": "^3.17.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
