@@ -49,11 +49,11 @@ export class OrderBookContract {
       const result = await sorobanClient.callMethod<number>(
         contract,
         'create_order',
-        nativeToScVal(maxPrice, {type: "u128"}),
+        [nativeToScVal(maxPrice, {type: "u128"}),
         nativeToScVal(numberOfBlocks, {type: "u32"}),
         nativeToScVal(quantity, {type: "u64"}),
         nativeToScVal(spec, { type: "symbol"}),
-        nativeToScVal(trustLevels),
+        nativeToScVal(trustLevels)],
       );
       
       logger.info(`Order created with ID ${result}`);
@@ -121,7 +121,8 @@ export class OrderBookContract {
       
       const result = await sorobanClient.callMethod<OrderRequest[]>(
         contract,
-        'list_orders'
+        'list_orders',
+        null
       );
       
       logger.info(`Retrieved ${result.length} orders`);
@@ -147,9 +148,9 @@ export class OrderBookContract {
       const result = await sorobanClient.callMethod<number>(
         contract,
         'place_bid',
-        orderId,
+        [orderId,
         providerId,
-        bidPrice
+        bidPrice]
       );
       
       logger.info(`Bid placed with ID ${result}`);

@@ -46,10 +46,10 @@ export class EscrowContract {
       await sorobanClient.callMethod(
         contract,
         'deposit',
-        senderKeypair,
+        [senderKeypair,
         tokenAddress,
         from,
-        amount
+        amount]
       );
       
       logger.info(`Deposited ${amount} from ${from}`);
@@ -79,10 +79,10 @@ export class EscrowContract {
       await sorobanClient.callMethod(
         contract,
         'withdraw',
-        senderKeypair,
+        [senderKeypair,
         tokenAddress,
         to,
-        amount
+        amount]
       );
       
       logger.info(`Withdrawn ${amount} to ${to}`);
@@ -112,9 +112,9 @@ export class EscrowContract {
       await sorobanClient.callMethod(
         contract,
         'lock',
-        tokenAddress,
+        [tokenAddress,
         from,
-        amount
+        amount]
       );
       
       logger.info(`Locked ${amount} from ${from}`);
@@ -143,9 +143,9 @@ export class EscrowContract {
       await sorobanClient.callMethod(
         contract,
         'unlock_tokens',
-        tokenAddress,
+        [tokenAddress,
         from,
-        amount
+        amount]
       );
       
       logger.info(`Unlocked ${amount} from ${from}`);
@@ -177,10 +177,10 @@ export class EscrowContract {
       await sorobanClient.callMethod(
         contract,
         'transfer_locked',
-        tokenAddress,
+        [tokenAddress,
         from,
         amount,
-        providerId
+        providerId]
       );
       
       logger.info(`Transferred ${amount} from ${from} to provider ${providerId}`);
@@ -208,9 +208,9 @@ export class EscrowContract {
       await sorobanClient.callMethod(
         contract,
         'withdraw_provider_earnings',
-        providerKeypair,
+        [providerKeypair,
         providerAddress,
-        tokenAddress
+        tokenAddress]
       );
       
       logger.info(`Withdrawn earnings for provider ${providerAddress}`);
@@ -234,8 +234,8 @@ export class EscrowContract {
       const result = await sorobanClient.callMethod<Tenant>(
         contract,
         'get_tenant_balance',
-        tokenAddress,
-        from
+        [tokenAddress,
+        from]
       );
       
       logger.info(`Retrieved balance for tenant ${from}`);
@@ -260,8 +260,8 @@ export class EscrowContract {
       const result = await sorobanClient.callMethod<ProviderToken>(
         contract,
         'get_provider_earnings',
-        providerId,
-        tokenAddress
+        [providerId,
+        tokenAddress]
       );
       
       logger.info(`Retrieved earnings for provider ${providerId}`);

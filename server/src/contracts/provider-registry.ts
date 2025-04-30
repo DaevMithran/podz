@@ -39,7 +39,7 @@ export class ProviderRegistryContract {
       const result = await sorobanClient.callMethod<number>(
         contract,
         'add_provider',
-        nativeToScVal(address)
+        nativeToScVal(address, { type: "address"})
       );
       
       logger.info(`Provider added with ID ${result}`);
@@ -66,8 +66,8 @@ export class ProviderRegistryContract {
       await sorobanClient.callMethod(
         contract,
         'set_trust_level',
-        providerId,
-        trustLevel
+        [providerId,
+        trustLevel]
       );
       
       logger.info(`Trust level set for provider ${providerId}`);
@@ -94,8 +94,8 @@ export class ProviderRegistryContract {
       await sorobanClient.callMethod(
         contract,
         'set_provider_status',
-        providerId,
-        status
+        [providerId,
+        status]
       );
       
       logger.info(`Status set for provider ${providerId}`);
@@ -164,7 +164,8 @@ export class ProviderRegistryContract {
       
       const result = await sorobanClient.callMethod<Provider[]>(
         contract,
-        'list_provider'
+        'list_provider',
+        null
       );
       
       logger.info(`Retrieved ${result.length} providers`);

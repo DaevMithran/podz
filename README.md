@@ -2,13 +2,13 @@
 
 ## Abstract
 
-This paper presents PodZ, a decentralized cloud computing marketplace built on the Stellar blockchain that enables the efficient utilization of computing resources through a transparent marketplace. Inspired by the Akash Network's economic model, PodZ implements a serverless cloud infrastructure on Stellar's efficient consensus mechanism, enabling lower-cost cloud computing with simplified deployment workflows. By leveraging the Stellar ecosystem's advantages including fast settlement, low transaction costs, and multi-asset support, PodZ creates a viable alternative to centralized cloud providers while addressing the barriers to entry for both providers and users of cloud resources.
+This paper presents PodZ, a decentralized cloud computing marketplace built on the Stellar blockchain that enables the efficient utilization of computing resources through a transparent marketplace. PodZ implements a serverless cloud infrastructure on Stellar's efficient consensus mechanism, enabling lower-cost cloud computing with simplified deployment workflows. By leveraging the Stellar ecosystem's advantages including fast settlement, low transaction costs, and multi-asset support, PodZ creates a viable alternative to centralized cloud providers while addressing the barriers to entry for both providers and users of cloud resources.
 
 ## 1. Introduction
 
-Cloud infrastructure has grown into a multi-billion dollar industry dominated by a small number of large providers. According to research cited in the Akash Network whitepaper, the cloud computing market was valued at $32.4 billion in 2020 with projections to reach $210 billion by 2022 [1]. The market is largely controlled by three major providers—Amazon Web Services (AWS), Google Cloud, and Microsoft Azure—who collectively account for 71% of the market share [1]. 
+Cloud infrastructure has grown into a multi-billion dollar industry dominated by a small number of large providers. The cloud computing market was valued at $32.4 billion in 2020 with projections to reach $210 billion by 2022. The market is largely controlled by three major providers—Amazon Web Services (AWS), Google Cloud, and Microsoft Azure—who collectively account for 71% of the market share. 
 
-This centralized control has led to several inefficiencies. Traditional data centers utilize only 6% of their maximum computing output on average throughout the year [2], with up to 30% of servers being "comatose"—consuming electricity but not delivering useful computing services [3]. Additionally, existing cloud service solutions are often inflexible, restrictive, and come with high recurring costs and vendor lock-in agreements [4].
+This centralized control has led to several inefficiencies. Traditional data centers utilize only 6% of their maximum computing output on average throughout the year, with up to 30% of servers being "comatose"—consuming electricity but not delivering useful computing services. Additionally, existing cloud service solutions are often inflexible, restrictive, and come with high recurring costs and vendor lock-in agreements.
 
 PodZ aims to address these inefficiencies by creating a decentralized marketplace for computing resources built on the Stellar blockchain. The system repurposes unused computing capacity, making it available to users at lower costs while enabling providers to monetize their excess capacity.
 
@@ -17,7 +17,7 @@ PodZ aims to address these inefficiencies by creating a decentralized marketplac
 The current cloud computing landscape presents several challenges:
 
 **2.1 Resource Inefficiency**
-With 8.4 million data centers globally and an estimated 96% of server capacity underutilized [5], there is significant waste in computing resources. This inefficiency drives up costs for consumers while representing lost revenue opportunities for resource owners.
+With 8.4 million data centers globally and an estimated 96% of server capacity underutilized, there is significant waste in computing resources. This inefficiency drives up costs for consumers while representing lost revenue opportunities for resource owners.
 
 **2.2 Market Centralization**
 The dominance of major cloud service providers creates an oligopolistic market structure with limited competition, resulting in higher prices and reduced innovation. These providers have established significant barriers to entry, making it difficult for new participants to enter the market.
@@ -71,14 +71,16 @@ The Unified Provider Service creates a standardized interface for diverse comput
 - **Deployment Management**: Handling the deployment of containerized applications across heterogeneous infrastructure.
 - **Performance Monitoring**: Tracking resource utilization and application performance.
 
-#### 3.2.3 Off-chain Monitors (vPodZ)
+#### 3.2.3 Off-chain Monitors Deloyed on PodZ (vPodZ)
 
-vPodZ nodes monitor the deployed services to ensure compliance with service level agreements. These monitors:
+vPodZ nodes monitor the deployed on the PodZ to ensure compliance with service level agreements. These monitors:
 
 - **Verify Uptime**: Check that services remain accessible according to the terms of the lease.
 - **Validate Performance**: Ensure that the promised computing resources are being delivered.
 - **Trigger Settlements**: Initiate payment transfers when conditions are met.
 - **Report Violations**: Flag breaches of service level agreements.
+
+vPodZ are earn rewards for successful reporting which are funded by the reward wallet. Adding the most important token utility for circular economy
 
 ### 3.3 Economic Model
 
